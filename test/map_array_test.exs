@@ -64,4 +64,14 @@ defmodule MapArrayTest do
     assert result == expected
   end
 
+  test "test to_list function" do
+    array = %{ 0 => "a", 1 => "b", 2 => "c"}
+    assert MapArray.to_list(array) == ["a", "b", "c"]
+  end
+
+  test "test reverse fnction" do
+    array = %{ 0 => "a", 1 => "b", 2 => "c"}
+    assert MapArray.reverse(array) == %{ 2 => "a", 1 => "b", 0 => "c" }
+  end
+
 end

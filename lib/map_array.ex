@@ -11,6 +11,10 @@ defmodule MapArray do
 
   @spec slice(Map.t(), Integer.t(), Integer.t()) :: Map.t()
 
+  @spec to_list(Map.t()) :: List.t()
+
+  @spec size(Map.t()) :: Integer.t()
+
   def new(dimensions, default_value \\ nil) do
     MapArrayImpl.new(dimensions, default_value)
   end
@@ -29,6 +33,18 @@ defmodule MapArray do
 
   def slice(map_array, from, until) do
     MapArrayImpl.slice(map_array, from, until)
+  end
+
+  def to_list(map_array) do
+    MapArrayImpl.to_list(map_array)
+  end
+
+  def size(map_array) do
+    MapArrayImpl.size(map_array)
+  end
+
+  def reverse(map_array) do
+    MapArrayImpl.reverse(map_array)
   end
 
 end
