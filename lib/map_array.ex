@@ -15,6 +15,8 @@ defmodule MapArray do
 
   @spec size(Map.t()) :: Integer.t()
 
+  @spec reverse(Map.t()) :: Map.t()
+
   def new(dimensions, default_value \\ nil) do
     MapArrayImpl.new(dimensions, default_value)
   end
