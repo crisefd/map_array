@@ -47,10 +47,10 @@ defmodule MapArray.MapArrayImpl do
   end
 
   def reverse(map) do
-    last_idx = map_size(map) - 1
-    (last_idx..0)
+    {min, max} = map |> Map.keys() |> Enum.min_max()
+    min..max
     |> Enum.reduce(%{}, fn(idx, acc) ->
-      Map.put(acc, abs(idx - last_idx), map[idx])
+      Map.put(acc, abs(idx - max) + min, map[idx])
     end)
   end
 

@@ -72,6 +72,10 @@ defmodule MapArrayTest do
   test "test reverse fnction" do
     array = %{ 0 => "a", 1 => "b", 2 => "c"}
     assert MapArray.reverse(array) == %{ 2 => "a", 1 => "b", 0 => "c" }
+
+    array2 =  %{2 => "a", 3 => "b", 4 => "c"}
+    assert MapArray.reverse(array2) ==  %{4 => "a", 3 => "b", 2 => "c"}
+
   end
 
 end
